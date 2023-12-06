@@ -1,0 +1,26 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu1804"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = false
+    vb.memory = "2048"
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get update
+    sudo apt-get install -y apt-transport-https
+
+    # Install the .NET SDK
+    wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+    sudo dpkg -i packages-microsoft-prod.deb
+    sudo apt update
+    sudo apt install -y dotnet-sdk-6.0
+
+    # Install my custom NuGet package
+
+    su - vagrant -c "dotnet tool install --global --add-source http://192.168.0.57:5000/v3/index.json --no-cache vBohushko --version 0.9.0"
+  SHELL
+end

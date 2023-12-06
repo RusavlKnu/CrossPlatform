@@ -266,7 +266,6 @@ TestWrappers_x64_debug
 TestWrappers_x64_checked
 TestWrappers_x64_release
 
-Vagrantfile
 .vagrant
 
 # CMake files

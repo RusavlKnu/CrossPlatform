@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "gusztavvargadr/windows-10"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = true
+    vb.memory = "2048"
+  end
+
+  # Provisioning script to install software
+  config.vm.provision "shell", privileged: true, inline: <<-SHELL
+    # PowerShell commands to install .NET SDK
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Invoke-WebRequest -UseBasicParsing https://dot.net/v1/dotnet-install.ps1 -OutFile dotnet-install.ps1
+    .\dotnet-install.ps1 -Channel 6.0
+
+    # Install my custom NuGet package
+    dotnet tool install --global --add-source http:///192.168.0.57:5000/v3/index.json --no-cache vBohushko
+  SHELL
+end
