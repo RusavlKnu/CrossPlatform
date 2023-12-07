@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Lab 1";
+}
+
+
+<div class="container">
+    <h2>Lab1. Number Calculation Task</h2>
+
+    <div class="task-description">
+        <h3>Task Requirements</h3>
+        <p>Given a natural number N, write a program that finds the number of natural numbers not exceeding N that are not divisible by any of the numbers 2, 3, 5.</p>
+        <p><strong>Input:</strong> Input file INPUT.TXT contains the number N (1 ≤ N ≤ 10<sup>9</sup>).</p>
+        <p><strong>Output:</strong> In the output file OUTPUT.TXT, print the answer to the task.</p>
+    </div>
+
+    <form method="post" enctype="multipart/form-data" asp-controller="" asp-action="Lab1">
+        <div class="form-group">
+            <label for="inputFile">Input File Path (INPUT.TXT):</label>
+            <input type="text" class="form-control" id="inputFile" name="inputFile" placeholder="Enter path to INPUT.TXT" required>
+        </div>
+        <div class="form-group">
+            <label for="outputFile">Output File Path (OUTPUT.TXT):</label>
+            <input type="text" class="form-control" id="outputFile" name="outputFile" placeholder="Enter path to OUTPUT.TXT" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Execute</button>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Lab 2";
+}
+
+
+<div class="container">
+    <h2>Lab 2. Letters Calculation Task</h2>
+
+    <div class="task-description">
+        <h3>Task Requirements</h3>
+        <p>Ланцюжком слів довжини N назвемо послідовність слів W1, W2, ..., WN таку, що для 1 ≤ i < N слово Wi є власним префіксом слова Wi+1.
+           Нагадаємо, що слово U довжини K називається власним префіксом слова V довжини L, якщо K < L і перші K букв слова V збігаються зі словом U.
+           Задано набір слів S = {S1, S2, ..., SM}. Знайдіть максимальну довжину ланцюжка слів, яку можна побудувати, використовуючи (можливо не всі) слова цього набору.</p>
+        <p><strong>Input:</strong> Вхідний файл INPUT.TXT містить ціле число M (1 ≤ M ≤ 255). Кожен із наступних M рядків містить по одному слову з набору S. Усі слова не порожні, мають довжину, що не перевищує 255 символів, і складаються лише з малих літер англійського алфавіту..</p>
+        <p><strong>Output:</strong>  вихідний файл OUTPUT.TXT виведіть відповідь на завдання.</p>
+    </div>
+
+    <form method="post" enctype="multipart/form-data" asp-controller="" asp-action="Lab1">
+        <div class="form-group">
+            <label for="inputFile">Input File Path (INPUT.TXT):</label>
+            <input type="text" class="form-control" id="inputFile" name="inputFile" placeholder="Enter path to INPUT.TXT" required>
+        </div>
+        <div class="form-group">
+            <label for="outputFile">Output File Path (OUTPUT.TXT):</label>
+            <input type="text" class="form-control" id="outputFile" name="outputFile" placeholder="Enter path to OUTPUT.TXT" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Execute</button>
+    </form>
+</div>

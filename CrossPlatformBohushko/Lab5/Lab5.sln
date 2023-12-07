@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5ClassLibrary", "Lab5ClassLibrary\Lab5ClassLibrary.csproj", "{75047B3E-B530-4780-8D49-8FB21AE900EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5Web", "Lab5Web\Lab5Web.csproj", "{139A85C0-04F4-4242-979D-99516F8B0974}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75047B3E-B530-4780-8D49-8FB21AE900EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75047B3E-B530-4780-8D49-8FB21AE900EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75047B3E-B530-4780-8D49-8FB21AE900EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75047B3E-B530-4780-8D49-8FB21AE900EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{139A85C0-04F4-4242-979D-99516F8B0974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139A85C0-04F4-4242-979D-99516F8B0974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139A85C0-04F4-4242-979D-99516F8B0974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139A85C0-04F4-4242-979D-99516F8B0974}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
