@@ -5,7 +5,7 @@ namespace Lab5ClassLibrary
 {
     public class Lab1
     {
-        public static void Execute(string inputFilePath, string outputFilePath)
+        public static string Execute(string inputFilePath, string outputFilePath)
         {
             int N;
             using (StreamReader reader = new StreamReader(inputFilePath))
@@ -15,15 +15,17 @@ namespace Lab5ClassLibrary
 
                 if (nextLine != null || !int.TryParse(line, out N))
                 {
-                    WriteError(outputFilePath,"Error: INPUT.txt should contain a single integer value.");
-                    return;
+                    string errorMessage = "Error: INPUT.txt should contain a single integer value.";
+                    WriteError(outputFilePath, errorMessage);
+                    return errorMessage;
                 }
             }
 
             if (N < 1 || N > 109)
             {
-                WriteError(outputFilePath ,"Error: Invalid value of N. It should be in the range 1 ≤ N ≤ 109.");
-                return;
+                string errorMessage = "Error: Invalid value of N. It should be in the range 1 ≤ N ≤ 109.";
+                WriteError(outputFilePath ,errorMessage);
+                return errorMessage;
             }
 
             int count = 0;
@@ -40,6 +42,8 @@ namespace Lab5ClassLibrary
             {
                 writer.WriteLine(count);
             }
+
+            return "To Output file was written: " + count;
         }
 
         private static void WriteError(string outputFilePath, string errorMessage)

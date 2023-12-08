@@ -12,16 +12,16 @@
         <p><strong>Input:</strong> Input file INPUT.TXT contains the number N (1 ≤ N ≤ 10<sup>9</sup>).</p>
         <p><strong>Output:</strong> In the output file OUTPUT.TXT, print the answer to the task.</p>
     </div>
-
-    <form method="post" enctype="multipart/form-data" asp-controller="" asp-action="Lab1">
+    
+    <form method="POST">
         <div class="form-group">
             <label for="inputFile">Input File Path (INPUT.TXT):</label>
-            <input type="text" class="form-control" id="inputFile" name="inputFile" placeholder="Enter path to INPUT.TXT" required>
+            <input type="text" class="form-control" id="inputFile" value="InputOutputFiles/Lab1/input.txt" name="inputFile" placeholder="Enter path to INPUT.TXT" required>
         </div>
         <div class="form-group">
             <label for="outputFile">Output File Path (OUTPUT.TXT):</label>
-            <input type="text" class="form-control" id="outputFile" name="outputFile" placeholder="Enter path to OUTPUT.TXT" required>
+            <input type="text" class="form-control" id="outputFile" value="InputOutputFiles/Lab1/output.txt" name="outputFile" placeholder="Enter path to OUTPUT.TXT" required>
         </div>
-        <button type="submit" class="btn btn-primary">Execute</button>
+        <button type="submit" class="btn btn-primary" value="Execute">Execute</button>
     </form>
 </div>

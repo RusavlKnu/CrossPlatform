@@ -15,15 +15,15 @@
         <p><strong>Output:</strong>  вихідний файл OUTPUT.TXT виведіть відповідь на завдання.</p>
     </div>
 
-    <form method="post" enctype="multipart/form-data" asp-controller="" asp-action="Lab1">
+    <form method="post">
         <div class="form-group">
             <label for="inputFile">Input File Path (INPUT.TXT):</label>
-            <input type="text" class="form-control" id="inputFile" name="inputFile" placeholder="Enter path to INPUT.TXT" required>
+            <input type="text" class="form-control" id="inputFile" value="InputOutputFiles/Lab2/input.txt" name="inputFile" placeholder="Enter path to INPUT.TXT" required>
         </div>
         <div class="form-group">
             <label for="outputFile">Output File Path (OUTPUT.TXT):</label>
-            <input type="text" class="form-control" id="outputFile" name="outputFile" placeholder="Enter path to OUTPUT.TXT" required>
+            <input type="text" class="form-control" id="outputFile" value="InputOutputFiles/Lab2/output.txt" name="outputFile" placeholder="Enter path to OUTPUT.TXT" required>
         </div>
-        <button type="submit" class="btn btn-primary">Execute</button>
+        <button type="submit" class="btn btn-primary" value="Execute">Execute</button>
     </form>
 </div>

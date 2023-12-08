@@ -6,7 +6,7 @@ namespace Lab5ClassLibrary;
 
 public class Lab2
 {
-    public static void Execute(string inputFilePath, string outputFilePath)
+    public static string Execute(string inputFilePath, string outputFilePath)
     {
         string[] words;
 
@@ -14,8 +14,9 @@ public class Lab2
         {
             if (!int.TryParse(reader.ReadLine()?.Trim(), out int M) || M < 1 || M > 255)
             {
-                Console.WriteLine("Invalid value for M in INPUT.txt");
-                return;
+                string error = "Invalid value for M in INPUT.txt";
+                Console.WriteLine(error);
+                return error;
             }
 
             words = new string[M];
@@ -24,16 +25,19 @@ public class Lab2
                 string word = reader.ReadLine()?.Trim();
                 if (string.IsNullOrWhiteSpace(word) || word.Length > 255 || !word.All(char.IsLower) || words.Contains(word))
                 {
-                    Console.WriteLine($"Invalid word at line {i + 2} in INPUT.txt");
-                    return;
+                    string error = "$Invalid word at line {i + 2} in INPUT.txt";
+                    Console.WriteLine(error);
+                    return error;
                 }
                 words[i] = word;
             }
 
             if (reader.ReadLine() != null)
             {
-                Console.WriteLine("There are more words than specified by M in INPUT.txt");
-                return;
+                string error = "There are more words than specified by M in INPUT.txt";
+
+                Console.WriteLine(error);
+                return error;
             }
         }
 
@@ -58,6 +62,7 @@ public class Lab2
         using (StreamWriter writer = new StreamWriter(outputFilePath))
         {
             writer.WriteLine(maxLength);
+            return "To Output file was written: " + maxLength;
         }
     }
 }

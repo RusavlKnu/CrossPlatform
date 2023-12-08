@@ -16,15 +16,15 @@
         <p><strong>Output:</strong> У вихідний файл OUTPUT.TXT виведіть мінімальну кількість алхімічних реакцій, які потрібні для отримання потрібної речовини з вихідної, або -1, якщо необхідну речовину неможливо отримати.</p>
     </div>
 
-    <form method="post" enctype="multipart/form-data" asp-controller="" asp-action="Lab1">
-        <div class="form-group">
-            <label for="inputFile">Input File Path (INPUT.TXT):</label>
-            <input type="text" class="form-control" id="inputFile" name="inputFile" placeholder="Enter path to INPUT.TXT" required>
-        </div>
-        <div class="form-group">
-            <label for="outputFile">Output File Path (OUTPUT.TXT):</label>
-            <input type="text" class="form-control" id="outputFile" name="outputFile" placeholder="Enter path to OUTPUT.TXT" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Execute</button>
-    </form>
+    <form method="POST">
+            <div class="form-group">
+                <label for="inputFile">Input File Path (INPUT.TXT):</label>
+                <input type="text" class="form-control" id="inputFile" value="InputOutputFiles/Lab3/input.txt" name="inputFile" placeholder="Enter path to INPUT.TXT" required>
+            </div>
+            <div class="form-group">
+                <label for="outputFile">Output File Path (OUTPUT.TXT):</label>
+                <input type="text" class="form-control" id="outputFile" value="InputOutputFiles/Lab3/output.txt" name="outputFile" placeholder="Enter path to OUTPUT.TXT" required>
+            </div>
+            <button type="submit" class="btn btn-primary" value="Execute">Execute</button>
+        </form>
 </div>

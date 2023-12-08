@@ -13,7 +13,7 @@ public class LabsController : Controller
 
     [Authorize]
     [HttpPost]
-    public void Lab1(string input_file,string output_file) => Lab5ClassLibrary.Lab1.Execute(input_file, output_file);
+    public string Lab1(string inputFile,string outputFile) => Lab5ClassLibrary.Lab1.Execute(inputFile, outputFile);
         
 
     [Authorize]
@@ -24,7 +24,7 @@ public class LabsController : Controller
 
     [Authorize]
     [HttpPost]
-    public void Lab2(string input_file, string output_file) => Lab5ClassLibrary.Lab2.Execute(input_file, output_file);
+    public string Lab2(string inputFile, string outputFile) => Lab5ClassLibrary.Lab2.Execute(inputFile, outputFile);
 
 
     [Authorize]
@@ -35,6 +35,6 @@ public class LabsController : Controller
 
     [Authorize]
     [HttpPost]
-    public void Lab3(string input_file, string output_file) => Lab5ClassLibrary.Lab3.Execute(input_file, output_file);
+    public string Lab3(string inputFile, string outputFile) => Lab5ClassLibrary.Lab3.Execute(inputFile, outputFile);
 
 }
